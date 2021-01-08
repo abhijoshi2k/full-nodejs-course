@@ -1,0 +1,32 @@
+<%- include('header') -%>
+
+	<div class="box" id="heading">
+		<h1><%= listTitle %></h1>
+	</div>
+
+	<div class="box">
+		<% if(listItems.length==0)
+		{
+			%><div class="item">
+				<p>No tasks....Yayyy!!</p>
+			</div><%
+		}
+		else
+		{
+			for(let i=0; i<listItems.length; i++)
+			{
+				%><div class="item">
+					<input type="checkbox" id="<%= listItems[i] %>">
+					<p><label for="<%= listItems[i] %>"><%= listItems[i] %></label></p>
+				</div><%
+			}
+		} %>
+		
+		<form class="item" action="/" method="post" autocomplete="off">
+			<input type="text" name="newItem" placeholder="New Item">
+			<button type="submit" name="list" value="<%= listTitle %>">+</button>
+		</form>
+
+	</div>
+
+<%- include('footer') -%>

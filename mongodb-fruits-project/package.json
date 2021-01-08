@@ -1,0 +1,15 @@
+{
+  "name": "mongodb-fruits-project",
+  "version": "1.0.0",
+  "description": "MongoDB based first project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abhishek Joshi",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^3.6.0",
+    "mongoose": "^5.10.0"
+  }
+}
